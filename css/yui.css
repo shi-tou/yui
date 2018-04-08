@@ -1,0 +1,78 @@
+.layui-body{
+    top:60px !important;
+}
+.layui-pagetabs {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 80px 0 40px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    position: fixed;
+    right: 0;
+    left: 200px;
+    z-index: 999;
+}
+.layui-pagetabs .layui-pagetabs-control{
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+.layui-pagetabs .layui-pagetabs-control:hover{
+    background: #f6f6f6;
+}
+.layui-pagetabs .layui-pagetabs-prev{
+    left:0px;
+    border-right: 1px solid #f6f6f6;
+}
+.layui-pagetabs .layui-pagetabs-next{
+    right: 40px;
+    border-left: 1px solid #f6f6f6;
+}
+.layui-pagetabs .layui-pagetabs-down{
+    right: 0px;
+    border-left: 1px solid #f6f6f6;
+}
+.layui-pagetabs .layui-pagetabs-nav{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    min-width: 100%;
+    line-height: 28px;
+    padding: 5px 0px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    z-index: 100;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+.layui-pagetabs .layui-pagetabs-nav dd{
+    padding: 5px 10px;
+}
+.layui-pagetabs .layui-pagetabs-nav dd:hover{
+    background: #f6f6f6;
+}
+.layui-pagetabs .layui-pagetabs-nav dd>a{
+    color:#666;   
+    font-size: 14px;
+}
+.layui-pagetabs .layui-tab {
+    margin: 0px !important;
+    overflow: hidden;
+    border: none !important;
+    color: #666;
+}
+.layui-pagetabs .layui-tab .layui-this{
+    background-color: #f6f6f6;
+} 
+.layui-pagetabs .layui-tab .layui-icon{
+    margin-right: 5px;
+}
+.layui-pagetabs .layui-tab .layui-tab-bar{
+    display: none;
+}
