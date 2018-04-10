@@ -64,15 +64,20 @@
 .layui-pagetabs .layui-tab {
     margin: 0px !important;
     overflow: hidden;
-    border: none !important;
     color: #666;
 }
-.layui-pagetabs .layui-tab .layui-this{
+.layui-pagetabs .layui-tab > .layui-tab-title {
+    overflow:hidden ;
+}
+.layui-pagetabs .layui-tab[overflow] > .layui-tab-title {
+    overflow: visible;
+}
+.layui-pagetabs .layui-tab-title .layui-this{
     background-color: #f6f6f6;
 } 
-.layui-pagetabs .layui-tab .layui-icon{
+.layui-pagetabs .layui-tab-title .layui-icon{
     margin-right: 5px;
 }
-.layui-pagetabs .layui-tab .layui-tab-bar{
+.layui-pagetabs .layui-tab-title .layui-tab-bar{
     display: none;
 }

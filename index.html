@@ -125,8 +125,8 @@
                         </dd>
                     </dl>
                 </div>
-                <div class="layui-tab" lay-filter="demo" lay-allowclose="true">
-                    <ul class="layui-tab-title">
+                <div class="layui-tab" lay-filter="menu-tab" lay-allowclose="true">
+                    <ul class="layui-tab-title" style="left:0px;">
                         <li class="layui-this" lay-id="11">
                             <i class="layui-icon">&#xe68e;</i>网站设置</li>
                         <li lay-id="22">用户管理</li>
@@ -153,55 +153,6 @@
     </div>
 </body>
 <script src="layui/layui.js"></script>
-<script src="js/tab.js"></script>
-<script>
-    //JavaScript代码区域
-    layui.use('element', function () {
-        var element = layui.element;
-        var $ = layui.jquery;
-        //tabs标签页滚动事件
-        $('.layui-pagetabs-prev').bind('click', function () {
-            tabMove('left')
-        });
-        $('.layui-pagetabs-next').bind('click', function () {
-            tabMove('right')
-        });
-        //显示隐藏tabs操作菜单
-        $('.layui-pagetabs-down').bind('mouseover', function () {
-            $('.layui-pagetabs-nav').show();
-        }).bind('mouseout', function () {
-            $('.layui-pagetabs-nav').hide();
-        });
-        $('.layui-nav .layui-nav-child a').on('click', function () {
-            var id = new Date().getTime();
-            //新增一个Tab项
-            element.tabAdd('demo', {
-                title: '新选项' + (Math.random() * 1000 | 0) //用于演示
-                    ,
-                content: '内容' + (Math.random() * 1000 | 0),
-                id: id //实际使用一般是规定好的id，这里以时间戳模拟下
-            })
-            element.tabChange('demo', id);
-            alert(id);
-        });
-        var tabMove = function (moveFlag) {
-            var tabWidth = $('.layui-tab-title').width();
-            var firstTabWidth = $('.layui-tab-title .layui-this').offset().left;
-            var lastTabWidth = $('.layui-tab-title .layui-this').offset().left;
-            if (selTabOffset >= tabWidth) {
-                var step = tabWidth / 3;
-                if (moveFlag == 'left') {
-                    step = -setp;
-                }
-                $('.layui-tab-title li').each(function (i, o) {
-                    var l = $(o).offset().left;
-                    $(o).offset({
-                        left: l + step
-                    });
-                });
-            }
-        };
-    });
-</script>
+<script src="js/index.js"></script>
 
 </html>
