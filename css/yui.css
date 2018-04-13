@@ -1,5 +1,5 @@
 .layui-body{
-    top:60px !important;
+    top:100px !important;
 }
 .layui-pagetabs {
     height: 40px;
@@ -72,6 +72,9 @@
 .layui-pagetabs .layui-tab[overflow] > .layui-tab-title {
     overflow: visible;
 }
+.layui-pagetabs .layui-tab-title li:first-child .layui-unselect  {
+    display: none;
+}
 .layui-pagetabs .layui-tab-title .layui-this{
     background-color: #f6f6f6;
 } 
@@ -80,4 +83,11 @@
 }
 .layui-pagetabs .layui-tab-title .layui-tab-bar{
     display: none;
+}
+/*iframe*/
+.layui-iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
 }

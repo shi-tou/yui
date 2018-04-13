@@ -60,26 +60,46 @@
             </ul>
         </div>
 
+        <!-- tabs标签页 -->
+        <div class="layui-pagetabs">
+            <div class="layui-icon layui-pagetabs-control layui-pagetabs-prev">&#xe65a;</div>
+            <div class="layui-icon layui-pagetabs-control layui-pagetabs-next">&#xe65b;</div>
+            <div class="layui-icon layui-pagetabs-control layui-pagetabs-down">&#xe61a;
+                <dl class="layui-pagetabs-nav">
+                    <dd>
+                        <a href="javascript:;">关闭当前标签页</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">关闭其它标签页</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">关闭全部标签页</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="layui-tab" lay-filter="menu-tab" lay-allowclose="true">
+                <ul class="layui-tab-title" style="left:0px;">
+                    <li class="layui-this" lay-id="0">
+                        <i class="layui-icon">&#xe68e;</i>我的桌面</li>
+                </ul>
+
+            </div>
+        </div>
+
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <div class="layui-side layui-bg-black">
             <div class="layui-side-scroll">
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-filter="test">
                     <li class="layui-nav-item layui-nav-itemed">
-                        <a class="" href="javascript:;">所有商品</a>
+                        <a class="" href="javascript:;">功能列表</a>
                         <dl class="layui-nav-child">
                             <dd>
-                                <a href="javascript:;">列表一</a>
+                                <a href="javascript:;" lay-id="1" lay-url="userlist1.html">用户管理1</a>
                             </dd>
                             <dd>
-                                <a href="javascript:;">列表二</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">列表三</a>
-                            </dd>
-                            <dd>
-                                <a href="">超链接</a>
-                            </dd>
+                                <a href="javascript:;" lay-id="2" lay-url="userlist2.html">用户管理2</a>
+                            </dd>、
                         </dl>
                     </li>
                     <li class="layui-nav-item">
@@ -107,43 +127,12 @@
         </div>
 
         <!-- 内容主体区域 -->
-        <div class="layui-body">
-            <!-- tabs标签页 -->
-            <div class="layui-pagetabs">
-                <div class="layui-icon layui-pagetabs-control layui-pagetabs-prev">&#xe65a;</div>
-                <div class="layui-icon layui-pagetabs-control layui-pagetabs-next">&#xe65b;</div>
-                <div class="layui-icon layui-pagetabs-control layui-pagetabs-down">&#xe61a;
-                    <dl class="layui-pagetabs-nav">
-                        <dd>
-                            <a href="javascript:;">关闭当前标签页</a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;">关闭其它标签页</a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;">关闭全部标签页</a>
-                        </dd>
-                    </dl>
-                </div>
-                <div class="layui-tab" lay-filter="menu-tab" lay-allowclose="true">
-                    <ul class="layui-tab-title" style="left:0px;">
-                        <li class="layui-this" lay-id="11">
-                            <i class="layui-icon">&#xe68e;</i>网站设置</li>
-                        <li lay-id="22">用户管理</li>
-                        <li lay-id="33">权限分配</li>
-                        <li lay-id="44">商品管理</li>
-                        <li lay-id="55">订单管理</li>
-                    </ul>
-                    <!-- iframe页面内容 -->
-                    <div class="layui-tab-content" style="padding: 15px;">
-                        <div class="layui-tab-item layui-show">网站设置</div>
-                        <div class="layui-tab-item">用户管理</div>
-                        <div class="layui-tab-item">权限分配</div>
-                        <div class="layui-tab-item">商品管理</div>
-                        <div class="layui-tab-item">订单管理</div>
-                    </div>
-                </div>
+        <div id="iframe-body" class="layui-body">
+            <!-- iframe页面内容 -->
+            <div class="layui-tab-item layui-show" id="tab_0">
+                <iframe class="layui-iframe" frameborder="0" src="mydesk.html"></iframe>
             </div>
+
         </div>
 
         <!-- 底部固定区域 -->
